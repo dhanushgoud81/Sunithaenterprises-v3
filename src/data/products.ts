@@ -276,24 +276,3 @@ export const slugForProduct = (title: string) =>
 
 /** How each window type opens — drives the 3D type viewer. */
 export type WindowKind = 'sliding' | 'casement' | 'arch' | 'combination' | 'tilt-turn' | 'villa';
-export const KIND_BY_TITLE: Record<string, WindowKind> = {
-  'Sliding Windows': 'sliding',
-  'Casement Windows': 'casement',
-  'Arch Windows': 'arch',
-  'Combination Windows': 'combination',
-  'Tilt and Turn Windows': 'tilt-turn',
-  'Villa Windows': 'villa',
-};
-
-// ─── Benefit groups (Why uPVC) — each maps to a part of the profile cut-through ─
-export type ProfilePart = 'chambers' | 'glass' | 'steel' | 'gaskets' | 'surface';
-export const BENEFIT_GROUPS: { id: string; title: string; part: ProfilePart; partLabel: string; items: string[] }[] = [
-  { id: 'comfort', title: 'Comfort', part: 'chambers', partLabel: 'Multi-chamber profile', items: ['Thermal Insulation'] },
-  { id: 'quiet', title: 'Quiet', part: 'glass', partLabel: 'Double-glazed unit', items: ['Sound Insulation'] },
-  { id: 'protection', title: 'Protection', part: 'steel', partLabel: 'Steel reinforcement', items: ['Security', 'Wind & Weather Resistance'] },
-  { id: 'sealed', title: 'Sealed', part: 'gaskets', partLabel: 'EPDM gaskets', items: ['Waterproof', 'UV & Corrosion Resistant'] },
-  { id: 'design', title: 'Low upkeep, any look', part: 'surface', partLabel: 'Laminated uPVC surface', items: ['Zero Maintenance', 'Design Flexibility'] },
-];
-
-export const profileCategory = (p: { tagline: string; name: string }) =>
-  /slid/i.test(p.tagline + p.name) ? 'Sliding' : 'Casement';

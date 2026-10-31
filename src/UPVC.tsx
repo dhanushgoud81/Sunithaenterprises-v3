@@ -3,12 +3,10 @@ import { useLocation } from 'react-router-dom';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PageWrapper } from './components/Shared';
 import { Hero } from './sections/Hero';
-import { About } from './sections/About';
-import { Benefits } from './sections/Benefits';
-import { WindowTypes } from './sections/WindowTypes';
-import { Profiles } from './sections/Profiles';
-import { Finishes } from './sections/Finishes';
-import { ProjectsTeaser } from './sections/ProjectsTeaser';
+import { WhyUpvc } from './sections/WhyUpvc';
+import { TypesAccordion } from './sections/TypesAccordion';
+import { ProfilesAlternating } from './sections/ProfilesAlternating';
+import { LaminationStrips } from './sections/LaminationStrips';
 import { scrollToId } from './lib/scroll';
 
 export default function UPVC() {
@@ -36,12 +34,10 @@ export default function UPVC() {
         })}
       </script>
       <Hero />
-      <About />
-      <Benefits />
-      <WindowTypes />
-      <Profiles />
-      <Finishes />
-      <ProjectsTeaser />
+      <WhyUpvc />
+      <TypesAccordion />
+      <ProfilesAlternating />
+      <LaminationStrips />
     </PageWrapper>
   );
 }

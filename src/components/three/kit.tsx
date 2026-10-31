@@ -44,10 +44,9 @@ interface SceneCanvasProps {
   camera: { position: [number, number, number]; fov?: number };
   envIntensity?: number;
   className?: string;
-  onPointerDown?: React.PointerEventHandler<HTMLDivElement>;
 }
 
-export function SceneCanvas({ children, camera, envIntensity = 1, className, onPointerDown }: SceneCanvasProps) {
+export function SceneCanvas({ children, camera, envIntensity = 1, className }: SceneCanvasProps) {
   const { active } = useStage();
   const coarse = isCoarsePointer();
   return (
@@ -63,7 +62,6 @@ export function SceneCanvas({ children, camera, envIntensity = 1, className, onP
         gl.toneMappingExposure = 1.05;
         gl.outputColorSpace = THREE.SRGBColorSpace;
       }}
-      onPointerDown={onPointerDown}
     >
       <StudioEnv intensity={envIntensity} />
       <Suspense fallback={null}>
@@ -72,34 +70,6 @@ export function SceneCanvas({ children, camera, envIntensity = 1, className, onP
       </Suspense>
     </Canvas>
   );
-}
-
-/** Pointer-drag rotation (desktop + touch). Returns a target angle ref and handlers. */
-export function useDragRotate(limit = Math.PI) {
-  const target = useRef(0);
-  const dragging = useRef(false);
-  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    dragging.current = true;
-    let lastX = e.clientX;
-    const el = e.currentTarget;
-    const move = (ev: PointerEvent) => {
-      const dx = ev.clientX - lastX;
-      lastX = ev.clientX;
-      target.current = Math.max(-limit, Math.min(limit, target.current + dx * 0.008));
-    };
-    const up = () => {
-      dragging.current = false;
-      window.removeEventListener('pointermove', move);
-      window.removeEventListener('pointerup', up);
-      window.removeEventListener('pointercancel', up);
-    };
-    window.addEventListener('pointermove', move);
-    window.addEventListener('pointerup', up);
-    window.addEventListener('pointercancel', up);
-    el.style.cursor = 'grabbing';
-    window.addEventListener('pointerup', () => { el.style.cursor = ''; }, { once: true });
-  };
-  return { target, dragging, onPointerDown };
 }
 
 export const damp = THREE.MathUtils.damp;
