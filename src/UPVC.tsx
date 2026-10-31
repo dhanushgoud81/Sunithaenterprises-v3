@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PageWrapper } from './components/Shared';
 import { Hero } from './sections/Hero';
-import { WhyUpvc } from './sections/WhyUpvc';
 import { TypesAccordion } from './sections/TypesAccordion';
 import { ProfilesAlternating } from './sections/ProfilesAlternating';
 import { LaminationStrips } from './sections/LaminationStrips';
@@ -16,7 +15,12 @@ export default function UPVC() {
   useEffect(() => {
     if (!hash) return;
     const id = hash.slice(1);
-    const t = window.setTimeout(() => { ScrollTrigger.refresh(); scrollToId(id, true); }, 120);
+    const t = window.setTimeout(() => {
+      ScrollTrigger.refresh();
+      scrollToId(id, true);
+      // Drop the #section from the address so a refresh opens on the hero again.
+      window.history.replaceState(window.history.state, '', window.location.pathname);
+    }, 120);
     return () => window.clearTimeout(t);
   }, [hash]);
 
@@ -34,7 +38,6 @@ export default function UPVC() {
         })}
       </script>
       <Hero />
-      <WhyUpvc />
       <TypesAccordion />
       <ProfilesAlternating />
       <LaminationStrips />
