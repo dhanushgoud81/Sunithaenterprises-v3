@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-10-31T06:44:30.104Z",
+  "source": "local-filesystem",
+  "totalGalleries": 1,
+  "totalPhotos": 5,
+  "galleries": [
+    {
+      "id": "luxury-villas",
+      "folderName": "Luxury-Villas",
+      "title": "Luxury Villas",
+      "description": "Bespoke luxury villa installations featuring panoramic multi-track sliding glass doors and architectural arches engineered for timeless residences.",
+      "coverImage": "/galleries/Luxury-Villas/01-villa-panoramic-window.jpg",
+      "count": 5,
+      "photos": [
+        {
+          "id": "luxury-villas-1",
+          "filename": "01-villa-panoramic-window.jpg",
+          "path": "/galleries/Luxury-Villas/01-villa-panoramic-window.jpg",
+          "title": "Villa Panoramic Window",
+          "isCover": true
+        },
+        {
+          "id": "luxury-villas-2",
+          "filename": "02-installed-sliding-doors.jpg",
+          "path": "/galleries/Luxury-Villas/02-installed-sliding-doors.jpg",
+          "title": "Installed Sliding Doors",
+          "isCover": false
+        },
+        {
+          "id": "luxury-villas-3",
+          "filename": "03-arch-elevation-window.jpg",
+          "path": "/galleries/Luxury-Villas/03-arch-elevation-window.jpg",
+          "title": "Arch Elevation Window",
+          "isCover": false
+        },
+        {
+          "id": "luxury-villas-4",
+          "filename": "04-installed-tilt-and-turn.jpg",
+          "path": "/galleries/Luxury-Villas/04-installed-tilt-and-turn.jpg",
+          "title": "Installed Tilt And Turn",
+          "isCover": false
+        },
+        {
+          "id": "luxury-villas-5",
+          "filename": "05-smart-slide-patio.jpg",
+          "path": "/galleries/Luxury-Villas/05-smart-slide-patio.jpg",
+          "title": "Smart Slide Patio",
+          "isCover": false
+        }
+      ]
+    }
+  ]
+}
