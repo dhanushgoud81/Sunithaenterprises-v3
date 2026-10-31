@@ -28,13 +28,13 @@ export function useGlassMaterial(lite: boolean) {
   const mat = useMemo(() => {
     if (lite) {
       return new THREE.MeshPhysicalMaterial({
-        color: '#cfe4df', roughness: 0.05, metalness: 0.1, transparent: true, opacity: 0.22,
+        color: '#d6e6f2', roughness: 0.05, metalness: 0.1, transparent: true, opacity: 0.22,
         envMapIntensity: 1.4, side: THREE.DoubleSide, depthWrite: false,
       });
     }
     return new THREE.MeshPhysicalMaterial({
-      color: '#e4f1ee', roughness: 0.03, metalness: 0, transmission: 1, thickness: 0.024, ior: 1.5,
-      envMapIntensity: 1.2, side: THREE.DoubleSide, attenuationColor: new THREE.Color('#9fd0c6'), attenuationDistance: 0.6,
+      color: '#e8f1f8', roughness: 0.03, metalness: 0, transmission: 1, thickness: 0.024, ior: 1.5,
+      envMapIntensity: 1.2, side: THREE.DoubleSide, attenuationColor: new THREE.Color('#a9cde6'), attenuationDistance: 0.6,
     });
   }, [lite]);
   useEffect(() => () => mat.dispose(), [mat]);

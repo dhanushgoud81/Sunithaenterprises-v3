@@ -11,7 +11,7 @@ export const WhatsAppWidget = () => (
     style={{ bottom: 'max(20px, calc(env(safe-area-inset-bottom, 0px) + 12px))' }}
     aria-label="Chat with us on WhatsApp"
   >
-    <span className="pointer-events-none absolute right-[4.25rem] whitespace-nowrap rounded-[2px] bg-anthracite px-3 py-2 text-xs font-medium text-white opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+    <span className="pointer-events-none absolute right-[4.25rem] whitespace-nowrap rounded-[2px] bg-navy px-3 py-2 text-xs font-medium text-white opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
       Chat on WhatsApp
     </span>
     <MessageCircle className="h-6 w-6" strokeWidth={2.2} aria-hidden="true" />

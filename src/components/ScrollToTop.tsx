@@ -18,7 +18,7 @@ export const ScrollToTop = () => {
       tabIndex={show ? 0 : -1}
       aria-hidden={!show}
       className={cn(
-        'fixed right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-anthracite/90 text-white backdrop-blur transition-all duration-400 hover:bg-basalt',
+        'fixed right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-navy/90 text-white backdrop-blur transition-all duration-400 hover:bg-basalt',
         show ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-3'
       )}
       style={{ bottom: 'max(88px, calc(env(safe-area-inset-bottom, 0px) + 80px))' }}

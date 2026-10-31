@@ -2,8 +2,10 @@
 @import "tailwindcss";
 
 /* ──────────────────────────────────────────────────────────────────────────
-   Sunitha Enterprises · "Frame & Light" design system
-   Anthracite product stages, cool paper reading surfaces, glass-edge accent.
+   Sunitha Enterprises design system
+   Palette follows the uPVC industry convention (Deceuninck, Kömmerling,
+   Fenesta, VEKA): white and cool-grey surfaces, charcoal text, one strong
+   blue, deep navy for dark stages.
    ────────────────────────────────────────────────────────────────────────── */
 @theme {
   --font-sans: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
@@ -13,51 +15,51 @@
   --font-oswald: "Archivo", "Arial Narrow", system-ui, sans-serif;
 
   /* Core palette */
-  --color-anthracite: #17191B;
-  --color-graphite: #202326;
-  --color-basalt: #2B2F31;
-  --color-paper: #F3F4F2;
-  --color-ink: #14171A;
-  --color-muted: #5A6365;
-  --color-rule: #D5D9D6;
-  --color-mist: #E7EAE8;
-  --color-glass: #2E6B65;
-  --color-glass-bright: #8CC2BB;
-  --color-glass-soft: #DCEBE8;
-  --color-oak: #B08754;
+  --color-navy: #0B1F33;        /* dark stages: hero, footer, menu */
+  --color-graphite: #11283F;
+  --color-basalt: #1B3550;      /* raised surfaces on navy */
+  --color-paper: #F2F5F8;       /* cool light grey sections */
+  --color-ink: #142130;         /* body and heading text */
+  --color-muted: #5B6878;       /* secondary text */
+  --color-rule: #D8E0E8;        /* hairlines and borders */
+  --color-mist: #E6ECF2;
+  --color-brand: #0B6BC2;       /* primary blue: buttons, links, accents on light */
+  --color-sky: #5CB8F2;         /* bright blue: accents on navy */
+  --color-brand-soft: #E2EFFA;  /* tinted backgrounds */
+  --color-oak: #B08754;         /* woodec finishes only */
 
   /* Legacy tokens remapped onto the new palette */
-  --color-surface: #F3F4F2;
-  --color-primary: #14171A;
-  --color-electric-blue: #2E6B65;
-  --color-steel-grey: #5A6365;
-  --color-deep-navy: #17191B;
-  --color-baumeister-yellow: #2E6B65;
-  --color-baumeister-charcoal: #17191B;
-  --color-baumeister-dark: #111314;
-  --color-outline: #8E9795;
-  --color-outline-variant: #D5D9D6;
+  --color-surface: #F2F5F8;
+  --color-primary: #142130;
+  --color-electric-blue: #0B6BC2;
+  --color-steel-grey: #5B6878;
+  --color-deep-navy: #0B1F33;
+  --color-baumeister-yellow: #0B6BC2;
+  --color-baumeister-charcoal: #0B1F33;
+  --color-baumeister-dark: #08182A;
+  --color-outline: #8C9AA9;
+  --color-outline-variant: #D8E0E8;
 
-  /* Neutral scale with a slight glass-green bias (replaces Tailwind's blue-grey slate) */
-  --color-slate-50: #F3F4F2;
-  --color-slate-100: #E9ECEA;
-  --color-slate-200: #D5D9D6;
-  --color-slate-300: #B9C0BD;
-  --color-slate-400: #8E9795;
-  --color-slate-500: #5F6967;
-  --color-slate-600: #4A5351;
-  --color-slate-700: #363D3C;
-  --color-slate-800: #24292A;
-  --color-slate-900: #181C1D;
-  --color-slate-950: #0F1213;
+  /* Cool blue-grey neutral scale */
+  --color-slate-50: #F2F5F8;
+  --color-slate-100: #E8EDF2;
+  --color-slate-200: #D8E0E8;
+  --color-slate-300: #B8C4D0;
+  --color-slate-400: #8C9AA9;
+  --color-slate-500: #5F6E7E;
+  --color-slate-600: #4A5867;
+  --color-slate-700: #354352;
+  --color-slate-800: #233140;
+  --color-slate-900: #162231;
+  --color-slate-950: #0C1622;
 
-  /* Stray blues in older markup resolve to the accent family */
-  --color-blue-50: #EEF6F4;
-  --color-blue-100: #DCEBE8;
-  --color-blue-500: #3D8A82;
-  --color-blue-600: #2E6B65;
-  --color-blue-700: #245650;
-  --color-cyan-100: #DCEBE8;
+  /* Stray blues in older markup resolve to the brand family */
+  --color-blue-50: #EEF5FC;
+  --color-blue-100: #E2EFFA;
+  --color-blue-500: #2B88D8;
+  --color-blue-600: #0B6BC2;
+  --color-blue-700: #0957A0;
+  --color-cyan-100: #E2EFFA;
 
   --ease-frame: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -79,10 +81,10 @@
     letter-spacing: -0.01em;
   }
 
-  ::selection { background: rgba(140, 194, 187, 0.35); color: inherit; }
+  ::selection { background: rgba(92, 184, 242, 0.3); color: inherit; }
 
   :focus-visible {
-    outline: 2px solid var(--color-glass-bright);
+    outline: 2px solid var(--color-sky);
     outline-offset: 3px;
   }
 }
@@ -153,10 +155,10 @@
 }
 .btn:active { transform: translateY(1px); }
 .btn:disabled { opacity: .6; cursor: not-allowed; }
-.btn-accent { background: var(--color-glass-bright); color: var(--color-ink); }
-.btn-accent:hover { background: #A7D3CD; }
-.btn-primary { background: var(--color-glass); color: #fff; }
-.btn-primary:hover { background: #245650; }
+.btn-accent { background: var(--color-sky); color: var(--color-ink); }
+.btn-accent:hover { background: #86CBF6; }
+.btn-primary { background: var(--color-brand); color: #fff; }
+.btn-primary:hover { background: #0957A0; }
 .btn-line-light { color: #fff; border-color: rgba(255,255,255,.45); }
 .btn-line-light:hover { border-color: #fff; background: rgba(255,255,255,.06); }
 .btn-line { color: var(--color-ink); border-color: var(--color-ink); }
@@ -164,7 +166,7 @@
 
 .link-arrow {
   display: inline-flex; align-items: center; gap: .5rem;
-  font-weight: 600; color: var(--color-glass);
+  font-weight: 600; color: var(--color-brand);
   background-image: linear-gradient(currentColor, currentColor);
   background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%;
   transition: background-size .35s var(--ease-frame);
@@ -174,7 +176,7 @@
 
 /* ── Surfaces ─────────────────────────────────────────────────────────────── */
 .hairline { border: 1px solid var(--color-rule); }
-.stage-dark { background: var(--color-anthracite); color: var(--color-mist); }
+.stage-dark { background: var(--color-navy); color: var(--color-mist); }
 
 .grain::after {
   content: "";

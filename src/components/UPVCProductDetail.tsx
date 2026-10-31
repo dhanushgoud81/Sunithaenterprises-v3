@@ -41,7 +41,7 @@ export interface WindowDetail {
 const CAD_GRID_PATTERN_LIGHT = (
   <defs>
     <pattern id="cadGridLight" width="10" height="10" patternUnits="userSpaceOnUse">
-      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(46, 107, 101, 0.04)" strokeWidth="0.5" />
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(11, 107, 194, 0.04)" strokeWidth="0.5" />
     </pattern>
   </defs>
 );
@@ -85,9 +85,9 @@ const SVG_SLIDING_4PANEL = (
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
     
     {/* Blueprint outer frame */}
-    <rect x="5" y="10" width="90" height="60" rx="1" className="stroke-[#2E6B65] stroke-2 opacity-90" />
+    <rect x="5" y="10" width="90" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2 opacity-90" />
     <line x1="27.5" y1="10" x2="27.5" y2="70" className="stroke-slate-300 stroke-dasharray-[2,2]" />
-    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#2E6B65] stroke-2" />
+    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#0B6BC2] stroke-2" />
     <line x1="72.5" y1="10" x2="72.5" y2="70" className="stroke-slate-300 stroke-dasharray-[2,2]" />
     
     {/* Sashes */}
@@ -97,10 +97,10 @@ const SVG_SLIDING_4PANEL = (
     <rect x="76.5" y="14" width="15" height="52" rx="0.5" className="stroke-slate-800" />
     
     {/* Technical Arrows */}
-    <path d="M 21 40 L 13 40 M 16 37 L 13 40 L 16 43" className="stroke-[#2E6B65] stroke-1" />
-    <path d="M 35 40 L 43 40 M 40 37 L 43 40 L 40 43" className="stroke-[#2E6B65] stroke-1" />
-    <path d="M 65 40 L 57 40 M 60 37 L 57 40 L 60 43" className="stroke-[#2E6B65] stroke-1" />
-    <path d="M 79 40 L 87 40 M 84 37 L 87 40 L 84 43" className="stroke-[#2E6B65] stroke-1" />
+    <path d="M 21 40 L 13 40 M 16 37 L 13 40 L 16 43" className="stroke-[#0B6BC2] stroke-1" />
+    <path d="M 35 40 L 43 40 M 40 37 L 43 40 L 40 43" className="stroke-[#0B6BC2] stroke-1" />
+    <path d="M 65 40 L 57 40 M 60 37 L 57 40 L 60 43" className="stroke-[#0B6BC2] stroke-1" />
+    <path d="M 79 40 L 87 40 M 84 37 L 87 40 L 84 43" className="stroke-[#0B6BC2] stroke-1" />
     
     {/* Dimension lines */}
     <path d="M 5 5 L 95 5 M 5 2 L 5 8 M 95 2 L 95 8" className="stroke-slate-300 stroke-[0.5]" />
@@ -113,18 +113,18 @@ const SVG_SLIDING_1TRACK_INT = (
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
     
-    <rect x="15" y="10" width="70" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
-    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="15" y="10" width="70" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
+    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#0B6BC2] stroke-2" />
     
     {/* Left Fixed Panel with large "X" */}
     <path d="M 20 18 L 45 62 M 45 18 L 20 62" className="stroke-slate-200 stroke-[1]" />
     
     {/* Right Sliding sash */}
     <rect x="54" y="14" width="27" height="52" rx="0.5" className="stroke-slate-800 stroke-[1.5]" />
-    <circle cx="58" cy="40" r="1" className="fill-[#2E6B65] stroke-none" />
+    <circle cx="58" cy="40" r="1" className="fill-[#0B6BC2] stroke-none" />
     
     {/* Sliding Arrow */}
-    <path d="M 75 40 L 63 40 M 67 36 L 63 40 L 67 44" className="stroke-[#2E6B65] stroke-1" />
+    <path d="M 75 40 L 63 40 M 67 36 L 63 40 L 67 44" className="stroke-[#0B6BC2] stroke-1" />
     <text x="50" y="4" textAnchor="middle" className="fill-slate-400 font-mono text-[4px]">W: 1800mm</text>
   </svg>
 );
@@ -134,12 +134,12 @@ const SVG_SLIDING_2_5TRACK_MESH = (
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
     
-    <rect x="5" y="10" width="90" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
-    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="5" y="10" width="90" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
+    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#0B6BC2] stroke-2" />
     
     {/* Left sash with mesh texture in top corner */}
     <rect x="9" y="14" width="37" height="52" rx="0.5" className="stroke-slate-800" />
-    <path d="M 34 14 L 42 22 M 38 14 L 42 18 M 41 14 L 42 15" className="stroke-[#2E6B65]/50 stroke-[0.8]" />
+    <path d="M 34 14 L 42 22 M 38 14 L 42 18 M 41 14 L 42 15" className="stroke-[#0B6BC2]/50 stroke-[0.8]" />
     
     {/* Right sliding sash */}
     <rect x="54" y="14" width="37" height="52" rx="0.5" className="stroke-slate-800 stroke-[1.5]" />
@@ -156,8 +156,8 @@ const SVG_SLIDING_2TRACK_MESH = (
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
     
-    <rect x="5" y="10" width="90" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
-    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="5" y="10" width="90" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
+    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#0B6BC2] stroke-2" />
     
     {/* Left & Right sashes */}
     <rect x="9" y="14" width="37" height="52" rx="0.5" className="stroke-slate-800" />
@@ -178,9 +178,9 @@ const SVG_CASEMENT_1PANEL = (
   <svg viewBox="0 0 100 80" className="w-full h-full stroke-slate-400 fill-none stroke-[1.2]">
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
-    <rect x="20" y="10" width="60" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="20" y="10" width="60" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
     <rect x="25" y="15" width="50" height="50" rx="0.5" className="stroke-slate-800" />
-    <path d="M 25 15 L 75 40 L 25 65" className="stroke-dashed stroke-[#2E6B65]/60 stroke-[1]" />
+    <path d="M 25 15 L 75 40 L 25 65" className="stroke-dashed stroke-[#0B6BC2]/60 stroke-[1]" />
     <circle cx="70" cy="40" r="1.5" className="fill-slate-900 stroke-none" />
   </svg>
 );
@@ -189,8 +189,8 @@ const SVG_CASEMENT_FRENCH = (
   <svg viewBox="0 0 100 80" className="w-full h-full stroke-slate-400 fill-none stroke-[1.2]">
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
-    <rect x="10" y="10" width="80" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
-    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="10" y="10" width="80" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
+    <line x1="50" y1="10" x2="50" y2="70" className="stroke-[#0B6BC2] stroke-2" />
     
     <rect x="14" y="15" width="32" height="50" rx="0.5" className="stroke-slate-800" />
     <path d="M 14 15 L 46 40 L 14 65" className="stroke-slate-300 stroke-[0.8]" />
@@ -204,7 +204,7 @@ const SVG_CASEMENT_TOPHUNG = (
   <svg viewBox="0 0 100 80" className="w-full h-full stroke-slate-400 fill-none stroke-[1.2]">
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
-    <rect x="20" y="10" width="60" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="20" y="10" width="60" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
     <rect x="25" y="15" width="50" height="50" rx="0.5" className="stroke-slate-800" />
     <path d="M 25 65 L 50 15 L 75 65" className="stroke-slate-300 stroke-[1]" />
     <circle cx="50" cy="60" r="1.5" className="fill-slate-900 stroke-none" />
@@ -216,7 +216,7 @@ const SVG_ARCH_FULL = (
   <svg viewBox="0 0 100 80" className="w-full h-full stroke-slate-400 fill-none stroke-[1.2]">
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
-    <path d="M 20 70 L 20 40 A 30 30 0 0 1 80 40 L 80 70 Z" className="stroke-[#2E6B65] stroke-2" />
+    <path d="M 20 70 L 20 40 A 30 30 0 0 1 80 40 L 80 70 Z" className="stroke-[#0B6BC2] stroke-2" />
     <line x1="20" y1="40" x2="80" y2="40" className="stroke-slate-200 stroke-dasharray-[2,2]" />
     <path d="M 26 65 L 26 40 A 24 24 0 0 1 74 40 L 74 65 Z" className="stroke-slate-800" />
   </svg>
@@ -226,8 +226,8 @@ const SVG_ARCH_OPERABLE = (
   <svg viewBox="0 0 100 80" className="w-full h-full stroke-slate-400 fill-none stroke-[1.2]">
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
-    <path d="M 20 70 L 20 40 A 30 30 0 0 1 80 40 L 80 70 Z" className="stroke-[#2E6B65] stroke-2" />
-    <line x1="20" y1="40" x2="80" y2="40" className="stroke-[#2E6B65] stroke-2" />
+    <path d="M 20 70 L 20 40 A 30 30 0 0 1 80 40 L 80 70 Z" className="stroke-[#0B6BC2] stroke-2" />
+    <line x1="20" y1="40" x2="80" y2="40" className="stroke-[#0B6BC2] stroke-2" />
     <rect x="25" y="44" width="50" height="22" rx="0.5" className="stroke-slate-800" />
     <path d="M 25 44 L 75 55 L 25 66" className="stroke-slate-300 stroke-[0.8]" />
   </svg>
@@ -238,8 +238,8 @@ const SVG_COMBINATION_CS_FX = (
   <svg viewBox="0 0 100 80" className="w-full h-full stroke-slate-400 fill-none stroke-[1.2]">
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
-    <rect x="10" y="10" width="80" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
-    <line x1="45" y1="10" x2="45" y2="70" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="10" y="10" width="80" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
+    <line x1="45" y1="10" x2="45" y2="70" className="stroke-[#0B6BC2] stroke-2" />
     
     <rect x="14" y="15" width="27" height="50" rx="0.5" className="stroke-slate-800" />
     <path d="M 14 15 L 41 40 L 14 65" className="stroke-slate-300" />
@@ -253,10 +253,10 @@ const SVG_TILT_TURN_TILT = (
   <svg viewBox="0 0 100 80" className="w-full h-full stroke-slate-400 fill-none stroke-[1.2]">
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
-    <rect x="20" y="10" width="60" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="20" y="10" width="60" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
     <rect x="25" y="15" width="50" height="50" rx="0.5" className="stroke-slate-800" />
-    <path d="M 25 15 L 50 65 L 75 15" className="stroke-[#2E6B65] stroke-1" />
-    <path d="M 25 15 L 75 15 L 50 25 Z" className="fill-[#2E6B65]/5 stroke-none" />
+    <path d="M 25 15 L 50 65 L 75 15" className="stroke-[#0B6BC2] stroke-1" />
+    <path d="M 25 15 L 75 15 L 50 25 Z" className="fill-[#0B6BC2]/5 stroke-none" />
   </svg>
 );
 
@@ -264,7 +264,7 @@ const SVG_VILLA_SYSTEM = (
   <svg viewBox="0 0 100 80" className="w-full h-full stroke-slate-400 fill-none stroke-[1.2]">
     {CAD_GRID_PATTERN_LIGHT}
     <rect width="100" height="80" fill="url(#cadGridLight)" className="stroke-none" />
-    <rect x="15" y="10" width="70" height="60" rx="1" className="stroke-[#2E6B65] stroke-2" />
+    <rect x="15" y="10" width="70" height="60" rx="1" className="stroke-[#0B6BC2] stroke-2" />
     <g className="stroke-slate-100 stroke-[0.75]">
       <line x1="25" y1="10" x2="25" y2="70" />
       <line x1="38" y1="10" x2="38" y2="70" />
@@ -665,9 +665,9 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6">
           <button 
             onClick={onBack}
-            className="flex items-center gap-2 text-slate-600 hover:text-[#2E6B65] text-xs uppercase font-extrabold tracking-widest transition-all duration-300 active:scale-95 group w-fit"
+            className="flex items-center gap-2 text-slate-600 hover:text-[#0B6BC2] text-xs uppercase font-extrabold tracking-widest transition-all duration-300 active:scale-95 group w-fit"
           >
-            <ArrowLeft className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-0.5 text-[#2E6B65]" /> Back to Systems
+            <ArrowLeft className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-0.5 text-[#0B6BC2]" /> Back to Systems
           </button>
           
           {/* Segmented slider categories navigation */}
@@ -683,7 +683,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                   }}
                   className={`px-5 py-2 rounded-full text-[10px] uppercase font-black tracking-widest transition-all duration-500 whitespace-nowrap ${
                     isActive 
-                      ? 'bg-gradient-to-r from-[#2E6B65] to-blue-600 text-white shadow-[0_4px_12px_rgba(46,107,101,0.25)] scale-[1.02]' 
+                      ? 'bg-gradient-to-r from-[#0B6BC2] to-blue-600 text-white shadow-[0_4px_12px_rgba(11,107,194,0.25)] scale-[1.02]' 
                       : 'text-slate-500 hover:text-slate-900 hover:bg-slate-200/60'
                   }`}
                 >
@@ -702,7 +702,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
           <span>/</span>
           <span>We Manufacture</span>
           <span>/</span>
-          <span className="text-[#2E6B65] font-extrabold tracking-[0.1em]">{detail.title}</span>
+          <span className="text-[#0B6BC2] font-extrabold tracking-[0.1em]">{detail.title}</span>
         </div>
       </div>
 
@@ -738,7 +738,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
               `}</style>
 
               {/* Soft warm solar insulation glow backdrop */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(46,107,101,0.03)_0%,transparent_60%)] animate-pulse pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(11,107,194,0.03)_0%,transparent_60%)] animate-pulse pointer-events-none" />
               
               <img 
                 ref={heroImageRef}
@@ -766,11 +766,11 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                       style={{ top: spot.top, left: spot.left }}
                       aria-label={`Inspect ${spot.title}`}
                     >
-                      <span className="absolute inset-0 rounded-full bg-[#2E6B65]/30 animate-ping" />
+                      <span className="absolute inset-0 rounded-full bg-[#0B6BC2]/30 animate-ping" />
                       <span className={`absolute inset-1 rounded-full flex items-center justify-center border text-[9px] font-black transition-all ${
                         isActive 
-                          ? 'bg-[#2E6B65] text-white border-white scale-110 shadow-lg' 
-                          : 'bg-white text-[#2E6B65] border-[#2E6B65]/35 group-hover/spot:scale-110'
+                          ? 'bg-[#0B6BC2] text-white border-white scale-110 shadow-lg' 
+                          : 'bg-white text-[#0B6BC2] border-[#0B6BC2]/35 group-hover/spot:scale-110'
                       }`}>
                         +
                       </span>
@@ -791,7 +791,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                         <path
                           d={spot.linePath.replace(/([0-9]+)/g, '$1%')}
                           fill="none"
-                          stroke="#2E6B65"
+                          stroke="#0B6BC2"
                           strokeWidth="1.25"
                           strokeLinecap="round"
                           strokeDasharray="100"
@@ -839,12 +839,12 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                     onClick={() => setActiveAngleIndex(i)}
                     className={`bg-white border rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 ${
                       i === activeAngleIndex 
-                        ? 'border-[#2E6B65] ring-2 ring-[#2E6B65]/10 scale-[1.02]' 
+                        ? 'border-[#0B6BC2] ring-2 ring-[#0B6BC2]/10 scale-[1.02]' 
                         : 'border-slate-200/80 hover:border-slate-350 hover:bg-slate-50'
                     }`}
                   >
                     <img src={imgSrc} alt={labels[i]} className="w-12 h-12 object-contain opacity-80 hover:opacity-100 transition-opacity mb-1 pointer-events-none" />
-                    <span className={`text-[7px] font-black uppercase tracking-wider ${i === activeAngleIndex ? 'text-[#2E6B65]' : 'text-slate-400'}`}>
+                    <span className={`text-[7px] font-black uppercase tracking-wider ${i === activeAngleIndex ? 'text-[#0B6BC2]' : 'text-slate-400'}`}>
                       {labels[i]}
                     </span>
                   </div>
@@ -855,20 +855,20 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
 
           {/* Right Column: Premium 2-Column Feature Cards Grid */}
           <div ref={contentRef} className="lg:col-span-7 flex flex-col justify-center">
-            <span className="text-[10px] font-extrabold text-[#2E6B65] uppercase tracking-[0.25em] block mb-3 anim-fade-up">
+            <span className="text-[10px] font-extrabold text-[#0B6BC2] uppercase tracking-[0.25em] block mb-3 anim-fade-up">
               SUNITHA PRECISION ENGINEERING
             </span>
             <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6 anim-fade-up leading-tight text-slate-900">
               {detail.title}
             </h1>
             
-            <p className="text-slate-500 text-base md:text-lg mb-10 leading-relaxed border-l-2 border-[#2E6B65] pl-6 anim-fade-up">
+            <p className="text-slate-500 text-base md:text-lg mb-10 leading-relaxed border-l-2 border-[#0B6BC2] pl-6 anim-fade-up">
               {detail.overview}
             </p>
 
             <div className="w-full h-[1px] bg-slate-200 mb-10 anim-fade-up" />
 
-            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#2E6B65] mb-8 anim-fade-up">
+            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#0B6BC2] mb-8 anim-fade-up">
               FEATURES & STRUCTURAL BENEFITS
             </h3>
 
@@ -879,9 +879,9 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                 return (
                   <div 
                     key={idx} 
-                    className="flex gap-4 p-5 rounded-xl bg-white border border-slate-200/80 hover:border-[#2E6B65]/30 hover:shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition-all duration-300 group"
+                    className="flex gap-4 p-5 rounded-xl bg-white border border-slate-200/80 hover:border-[#0B6BC2]/30 hover:shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition-all duration-300 group"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-slate-50 text-[#2E6B65] border border-slate-200 flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-slate-50 text-[#0B6BC2] border border-slate-200 flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <div>
@@ -902,7 +902,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
 
       {/* ─── Middle Section: Light CAD Blueprint Configuration Options ────────────── */}
       <section className="bg-white border-y border-slate-200 py-24 mt-24 relative" id="options-slider">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(46,107,101,0.02)_0%,transparent_50%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(11,107,194,0.02)_0%,transparent_50%)] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           
@@ -922,7 +922,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
             <button 
               onClick={scrollLeft}
               aria-label="Scroll left"
-              className="w-12 h-12 bg-[#2E6B65] hover:bg-[#004da3] shrink-0 flex items-center justify-center text-white transition-all active:scale-95 shadow-[0_4px_12px_rgba(46,107,101,0.3)] rounded-sm z-10"
+              className="w-12 h-12 bg-[#0B6BC2] hover:bg-[#004da3] shrink-0 flex items-center justify-center text-white transition-all active:scale-95 shadow-[0_4px_12px_rgba(11,107,194,0.3)] rounded-sm z-10"
             >
               <ChevronLeft className="w-6 h-6 stroke-[3.5]" />
             </button>
@@ -936,16 +936,16 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
               {detail.options.map((option, i) => (
                 <div 
                   key={i} 
-                  className="min-w-[280px] md:min-w-[310px] flex-shrink-0 flex flex-col items-center gap-4 bg-white/65 backdrop-blur-md border border-slate-200/60 hover:border-[#2E6B65]/40 p-6 rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_45px_rgba(46,107,101,0.05)] transition-all duration-500 group"
+                  className="min-w-[280px] md:min-w-[310px] flex-shrink-0 flex flex-col items-center gap-4 bg-white/65 backdrop-blur-md border border-slate-200/60 hover:border-[#0B6BC2]/40 p-6 rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_45px_rgba(11,107,194,0.05)] transition-all duration-500 group"
                   style={{ scrollSnapAlign: 'start' }}
                 >
                   {/* Schematic card container (Light CAD blueprint dot grid background) */}
                   <div className="w-full h-48 bg-slate-50/50 border border-slate-200/50 flex items-center justify-center rounded-sm relative overflow-hidden select-none"
-                       style={{ backgroundImage: 'radial-gradient(#2E6B65 0.75px, transparent 0.75px)', backgroundSize: '12px 12px' }}>
+                       style={{ backgroundImage: 'radial-gradient(#0B6BC2 0.75px, transparent 0.75px)', backgroundSize: '12px 12px' }}>
                     {option.svgPath}
                   </div>
                   {/* Centered bold capitalized text */}
-                  <span className="text-[10px] font-extrabold text-slate-800 text-center uppercase tracking-wider block px-2 leading-relaxed h-12 flex items-center justify-center group-hover:text-[#2E6B65] transition-colors">
+                  <span className="text-[10px] font-extrabold text-slate-800 text-center uppercase tracking-wider block px-2 leading-relaxed h-12 flex items-center justify-center group-hover:text-[#0B6BC2] transition-colors">
                     {option.name}
                   </span>
                 </div>
@@ -956,7 +956,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
             <button 
               onClick={scrollRight}
               aria-label="Scroll right"
-              className="w-12 h-12 bg-[#2E6B65] hover:bg-[#004da3] shrink-0 flex items-center justify-center text-white transition-all active:scale-95 shadow-[0_4px_12px_rgba(46,107,101,0.3)] rounded-sm z-10"
+              className="w-12 h-12 bg-[#0B6BC2] hover:bg-[#004da3] shrink-0 flex items-center justify-center text-white transition-all active:scale-95 shadow-[0_4px_12px_rgba(11,107,194,0.3)] rounded-sm z-10"
             >
               <ChevronRight className="w-6 h-6 stroke-[3.5]" />
             </button>
@@ -989,7 +989,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                         <div className="w-full border border-slate-300 rounded-[6px] overflow-hidden">
                           <table className="w-full border-collapse text-left bg-white text-xs md:text-sm">
                             <thead>
-                              <tr className="bg-[#2E6B65] text-white font-semibold uppercase tracking-wider text-[11px] md:text-[12px]">
+                              <tr className="bg-[#0B6BC2] text-white font-semibold uppercase tracking-wider text-[11px] md:text-[12px]">
                                 <th className="px-5 py-3.5 w-7/12 font-bold">Parameter</th>
                                 <th className="px-5 py-3.5 w-5/12 font-bold">Specifications</th>
                               </tr>
@@ -1064,7 +1064,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
       <section ref={customRef} className="max-w-7xl mx-auto px-6 md:px-12 py-24 mt-10">
         
         <div className="text-center mb-20">
-          <span className="text-xs font-bold text-[#2E6B65] uppercase tracking-widest block mb-4">Live Customizer Console</span>
+          <span className="text-xs font-bold text-[#0B6BC2] uppercase tracking-widest block mb-4">Live Customizer Console</span>
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest mb-4 text-slate-900">
             Customise Your {detail.title.replace('uPVC ', '')}
           </h2>
@@ -1098,13 +1098,13 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                   onClick={() => setSelectedCustomTab(tab.id as any)}
                   className={`flex gap-4 p-5 rounded-xl cursor-pointer border transition-all duration-300 ${
                     isActive 
-                      ? 'bg-gradient-to-r from-blue-50/40 to-slate-50 border-[#2E6B65]/50 shadow-[0_4px_20px_rgba(46,107,101,0.05)] scale-[1.01]' 
+                      ? 'bg-gradient-to-r from-blue-50/40 to-slate-50 border-[#0B6BC2]/50 shadow-[0_4px_20px_rgba(11,107,194,0.05)] scale-[1.01]' 
                       : 'bg-white border-slate-200/60 hover:border-slate-350 hover:bg-slate-50/50'
                   }`}
                 >
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 border transition-all ${
                     isActive 
-                      ? 'bg-blue-50 border-[#2E6B65] text-[#2E6B65]' 
+                      ? 'bg-blue-50 border-[#0B6BC2] text-[#0B6BC2]' 
                       : 'bg-slate-50 border-slate-200 text-slate-400'
                   }`}>
                     <TabIcon className="w-5 h-5" />
@@ -1112,7 +1112,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                   <div>
                     <h4 className="font-extrabold text-slate-800 text-sm uppercase tracking-tight mb-1 flex items-center gap-2">
                       {tab.title}
-                      {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#2E6B65] animate-ping" />}
+                      {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#0B6BC2] animate-ping" />}
                     </h4>
                     <p className="text-slate-500 text-xs leading-relaxed">{tab.text}</p>
                   </div>
@@ -1130,7 +1130,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-4 flex-wrap">
                     <div>
-                      <span className="text-[9px] uppercase tracking-widest text-[#2E6B65] font-extrabold block mb-1">Category: aluplast Lamination finishes</span>
+                      <span className="text-[9px] uppercase tracking-widest text-[#0B6BC2] font-extrabold block mb-1">Category: aluplast Lamination finishes</span>
                       <h4 className="text-xl font-bold uppercase text-slate-900">Choose Swatches & Finishes</h4>
                     </div>
                     {/* Sub-tabs switcher */}
@@ -1180,7 +1180,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                           onClick={() => setActiveColor(swatch)}
                           className={`flex items-center gap-2.5 px-3 py-1.5 border rounded-full text-xs font-bold transition-all duration-300 ${
                             isSelected 
-                              ? 'bg-blue-50 border-[#2E6B65] text-slate-900 shadow-sm' 
+                              ? 'bg-blue-50 border-[#0B6BC2] text-slate-900 shadow-sm' 
                               : 'bg-white border-slate-200 text-slate-500 hover:text-slate-900 hover:border-slate-350'
                           }`}
                         >
@@ -1210,7 +1210,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                     }}
                   />
                   <div>
-                    <h5 className="font-extrabold text-sm text-[#2E6B65] uppercase tracking-tight">{activeColor.name} Swatch</h5>
+                    <h5 className="font-extrabold text-sm text-[#0B6BC2] uppercase tracking-tight">{activeColor.name} Swatch</h5>
                     <p className="text-slate-500 text-xs mt-1 leading-relaxed">{activeColor.desc}</p>
                     <p className="text-slate-400 text-[10px] font-mono mt-1">Status: Active Selection · Samples Available</p>
                   </div>
@@ -1222,7 +1222,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
             {selectedCustomTab === 'glass' && (
               <div className="flex flex-col gap-6 h-full justify-between">
                 <div>
-                  <span className="text-[9px] uppercase tracking-widest text-[#2E6B65] font-extrabold block mb-2">Category: Glass & Acoustics</span>
+                  <span className="text-[9px] uppercase tracking-widest text-[#0B6BC2] font-extrabold block mb-2">Category: Glass & Acoustics</span>
                   <h4 className="text-xl font-bold uppercase text-slate-900 mb-4">Insulation Glass Configurations</h4>
                   <p className="text-slate-500 text-xs leading-relaxed mb-8">
                     Interact with our insulation slider to check the U-value thermal retention and sound reduction decibels for each glazing configuration:
@@ -1242,12 +1242,12 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                           onClick={() => setActiveGlassLevel(levelItem.level as any)}
                           className={`p-4 border rounded-xl flex flex-col text-left transition-all duration-300 ${
                             isSelected 
-                              ? 'bg-blue-50/50 border-[#2E6B65] shadow-[0_4px_15px_rgba(46,107,101,0.05)] scale-[1.01]' 
+                              ? 'bg-blue-50/50 border-[#0B6BC2] shadow-[0_4px_15px_rgba(11,107,194,0.05)] scale-[1.01]' 
                               : 'bg-white border-slate-200 hover:border-slate-350'
                           }`}
                         >
                           <span className="font-extrabold text-[10px] uppercase text-slate-800 mb-2">{levelItem.label}</span>
-                          <span className="text-[#2E6B65] text-xs font-mono font-bold">{levelItem.uVal}</span>
+                          <span className="text-[#0B6BC2] text-xs font-mono font-bold">{levelItem.uVal}</span>
                           <span className="text-slate-400 text-[10px] mt-1 font-mono">{levelItem.db}</span>
                         </button>
                       );
@@ -1259,7 +1259,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                 <div className="bg-white border border-slate-200/80 p-5 rounded-lg">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Insulation Rating</span>
-                    <span className="text-xs text-[#2E6B65] font-bold">
+                    <span className="text-xs text-[#0B6BC2] font-bold">
                       {activeGlassLevel === 1 && 'Basic Protection'}
                       {activeGlassLevel === 2 && 'Advanced Energy Saver'}
                       {activeGlassLevel === 3 && 'Ultimate Passive House'}
@@ -1267,7 +1267,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                   </div>
                   <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
                     <div 
-                      className="h-full bg-gradient-to-r from-[#2E6B65] to-blue-500 transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-[#0B6BC2] to-blue-500 transition-all duration-500"
                       style={{ width: activeGlassLevel === 1 ? '33%' : activeGlassLevel === 2 ? '66%' : '100%' }}
                     />
                   </div>
@@ -1279,7 +1279,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
             {selectedCustomTab === 'hardware' && (
               <div className="flex flex-col gap-6 h-full justify-between">
                 <div>
-                  <span className="text-[9px] uppercase tracking-widest text-[#2E6B65] font-extrabold block mb-2">Category: Metal Hardware</span>
+                  <span className="text-[9px] uppercase tracking-widest text-[#0B6BC2] font-extrabold block mb-2">Category: Metal Hardware</span>
                   <h4 className="text-xl font-bold uppercase text-slate-900 mb-4">Precision Locking & Smooth Rolling stays</h4>
                   <p className="text-slate-500 text-xs leading-relaxed mb-6">
                     A window\'s operational lifespan depends entirely on its structural metal stays. Sunitha Enterprises imports certified hardware built to last 50,000 cycles:
@@ -1293,7 +1293,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                       { name: 'Perimeter Friction Hinges', desc: 'Stainless steel stays that hold windows stable at any angle against gusts.' }
                     ].map((hw, i) => (
                       <div key={i} className="bg-white border border-slate-200/80 p-4 rounded-lg flex gap-3">
-                        <Check className="w-4 h-4 text-[#2E6B65] shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-[#0B6BC2] shrink-0 mt-0.5" />
                         <div>
                           <h6 className="font-extrabold text-xs text-slate-800 uppercase tracking-tight">{hw.name}</h6>
                           <p className="text-slate-500 text-[10px] leading-relaxed mt-1">{hw.desc}</p>
@@ -1309,7 +1309,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
             {selectedCustomTab === 'mesh' && (
               <div className="flex flex-col gap-6 h-full justify-between">
                 <div>
-                  <span className="text-[9px] uppercase tracking-widest text-[#2E6B65] font-extrabold block mb-2">Category: Safety screen systems</span>
+                  <span className="text-[9px] uppercase tracking-widest text-[#0B6BC2] font-extrabold block mb-2">Category: Safety screen systems</span>
                   <h4 className="text-xl font-bold uppercase text-slate-900 mb-4">High-Tensile Wire Mesh & Safety Grills</h4>
                   <p className="text-slate-500 text-xs leading-relaxed mb-6">
                     Configure custom barrier systems to filter out mosquitoes, block dust, and secure your home from break-ins:
@@ -1323,7 +1323,7 @@ export default function UPVCProductDetail({ productName, onBack, onSelectProduct
                       { name: 'Pleated Accordion Screen', desc: 'Retractable pleated insect screen that folds out of sight inside side profiles.' }
                     ].map((mesh, i) => (
                       <div key={i} className="bg-white border border-slate-200/80 p-4 rounded-lg flex gap-3">
-                        <Check className="w-4 h-4 text-[#2E6B65] shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-[#0B6BC2] shrink-0 mt-0.5" />
                         <div>
                           <h6 className="font-extrabold text-xs text-slate-800 uppercase tracking-tight">{mesh.name}</h6>
                           <p className="text-slate-500 text-[10px] leading-relaxed mt-1">{mesh.desc}</p>

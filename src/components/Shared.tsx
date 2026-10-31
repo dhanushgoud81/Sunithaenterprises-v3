@@ -114,7 +114,7 @@ export const Navbar = () => {
       <header
         className={cn(
           'fixed inset-x-0 top-0 z-50 transition-[transform,background-color,border-color] duration-500 ease-[var(--ease-frame)]',
-          solid ? 'bg-anthracite/90 backdrop-blur-xl border-b border-white/[0.07]' : 'bg-transparent border-b border-transparent',
+          solid ? 'bg-navy/90 backdrop-blur-xl border-b border-white/[0.07]' : 'bg-transparent border-b border-transparent',
           hidden && !open ? '-translate-y-full' : 'translate-y-0'
         )}
       >
@@ -137,7 +137,7 @@ export const Navbar = () => {
                 {item.label}
                 <span
                   className={cn(
-                    'absolute left-4 right-4 -bottom-0.5 h-px bg-glass-bright origin-left transition-transform duration-500 ease-[var(--ease-frame)]',
+                    'absolute left-4 right-4 -bottom-0.5 h-px bg-sky origin-left transition-transform duration-500 ease-[var(--ease-frame)]',
                     isActive(item) ? 'scale-x-100' : 'scale-x-0'
                   )}
                 />
@@ -147,7 +147,7 @@ export const Navbar = () => {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <a href={COMPANY.phoneHref} className="hidden xl:flex items-center gap-2 px-3 py-2 text-sm text-white/70 hover:text-white font-mono tabular">
-              <Phone className="w-4 h-4 text-glass-bright" aria-hidden="true" />
+              <Phone className="w-4 h-4 text-sky" aria-hidden="true" />
               {COMPANY.phoneDisplay}
             </a>
             <button onClick={() => go('/contact')} className="btn btn-accent hidden sm:inline-flex !py-3 !px-5 text-sm">
@@ -175,7 +175,7 @@ export const Navbar = () => {
         aria-modal="true"
         aria-label="Menu"
         className={cn(
-          'lg:hidden fixed inset-0 z-[45] bg-anthracite pt-[72px] flex flex-col transition-[opacity,visibility] duration-400',
+          'lg:hidden fixed inset-0 z-[45] bg-navy pt-[72px] flex flex-col transition-[opacity,visibility] duration-400',
           open ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
         )}
       >
@@ -187,13 +187,13 @@ export const Navbar = () => {
               tabIndex={open ? 0 : -1}
               className={cn(
                 'group flex items-baseline justify-between border-b border-white/[0.08] py-4 text-left font-display font-semibold font-wide text-[clamp(1.75rem,7vw,2.5rem)] leading-tight transition-[transform,opacity,color] duration-500 ease-[var(--ease-frame)]',
-                (item.path === '/' ? isHome && !active : isActive(item)) ? 'text-glass-bright' : 'text-white',
+                (item.path === '/' ? isHome && !active : isActive(item)) ? 'text-sky' : 'text-white',
                 open ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
               )}
               style={{ transitionDelay: open ? `${80 + i * 45}ms` : '0ms' }}
             >
               {item.label}
-              <ArrowUpRight className="w-5 h-5 text-white/30 group-hover:text-glass-bright" aria-hidden="true" />
+              <ArrowUpRight className="w-5 h-5 text-white/30 group-hover:text-sky" aria-hidden="true" />
             </button>
           ))}
         </nav>
@@ -228,7 +228,7 @@ export const Footer = () => {
       <div className="shell">
         <div className="section-y border-b border-white/[0.08] grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
           <div>
-            <p className="eyebrow text-glass-bright mb-5">Start your project</p>
+            <p className="eyebrow text-sky mb-5">Start your project</p>
             <h2 className="display-lg text-white max-w-[18ch]">Planning new windows? Get a quote for your openings.</h2>
           </div>
           <div className="flex flex-col gap-4 lg:items-end">
@@ -253,7 +253,7 @@ export const Footer = () => {
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             {COMPANY.socials.map(s => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="text-sm text-white/55 hover:text-glass-bright">
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="text-sm text-white/55 hover:text-sky">
                 {s.label}
               </a>
             ))}
@@ -285,11 +285,11 @@ export const Footer = () => {
         <div>
           <h3 className="eyebrow text-white/40 mb-5">Contact</h3>
           <ul className="flex flex-col gap-4 text-[0.9375rem]">
-            <li><a href={COMPANY.phoneHref} className="flex gap-3 text-white/75 hover:text-white font-mono tabular"><Phone className="w-4 h-4 mt-1 text-glass-bright shrink-0" aria-hidden="true" />{COMPANY.phoneDisplay}</a></li>
-            <li><a href={`mailto:${COMPANY.email}`} className="flex gap-3 text-white/75 hover:text-white break-all"><Mail className="w-4 h-4 mt-1 text-glass-bright shrink-0" aria-hidden="true" />{COMPANY.email}</a></li>
+            <li><a href={COMPANY.phoneHref} className="flex gap-3 text-white/75 hover:text-white font-mono tabular"><Phone className="w-4 h-4 mt-1 text-sky shrink-0" aria-hidden="true" />{COMPANY.phoneDisplay}</a></li>
+            <li><a href={`mailto:${COMPANY.email}`} className="flex gap-3 text-white/75 hover:text-white break-all"><Mail className="w-4 h-4 mt-1 text-sky shrink-0" aria-hidden="true" />{COMPANY.email}</a></li>
             <li>
               <a href={COMPANY.mapUrl} target="_blank" rel="noopener noreferrer" className="flex gap-3 text-white/75 hover:text-white leading-relaxed">
-                <MapPin className="w-4 h-4 mt-1 text-glass-bright shrink-0" aria-hidden="true" />
+                <MapPin className="w-4 h-4 mt-1 text-sky shrink-0" aria-hidden="true" />
                 <span>{COMPANY.addressLines.map(l => <span key={l} className="block">{l}</span>)}</span>
               </a>
             </li>

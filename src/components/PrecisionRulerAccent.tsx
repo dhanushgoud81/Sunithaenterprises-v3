@@ -56,14 +56,14 @@ export const PrecisionRulerAccent = ({ className = "my-6" }: { className?: strin
       {/* Precision blueprint expanding baseline */}
       <div 
         ref={lineRef}
-        className="w-28 h-[1.5px] bg-[#2E6B65] shadow-[0_0_8px_rgba(46,107,101,0.25)] rounded-full"
+        className="w-28 h-[1.5px] bg-[#0B6BC2] shadow-[0_0_8px_rgba(11,107,194,0.25)] rounded-full"
       />
       {/* Fractional tick marks resembling micro-measurements */}
       <div ref={ticksRef} className="flex justify-between w-24 px-1.5 opacity-90">
         <span className="w-px h-1 bg-slate-300" />
         <span className="w-px h-1.5 bg-slate-400" />
         <span className="w-px h-1 bg-slate-300" />
-        <span className="w-px h-2 bg-[#2E6B65]" />
+        <span className="w-px h-2 bg-[#0B6BC2]" />
         <span className="w-px h-1 bg-slate-300" />
         <span className="w-px h-1.5 bg-slate-400" />
         <span className="w-px h-1 bg-slate-300" />

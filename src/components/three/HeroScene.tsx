@@ -29,8 +29,8 @@ function Wall() {
   useEffect(() => () => geo.dispose(), [geo]);
   return (
     <mesh geometry={geo} position={[0, 0, -0.03]} receiveShadow>
-      {/* unlit, exactly the page's anthracite, so the stage has no visible edge */}
-      <meshBasicMaterial color="#17191B" toneMapped={false} />
+      {/* unlit, exactly the page's navy, so the stage has no visible edge */}
+      <meshBasicMaterial color="#0B1F33" toneMapped={false} />
     </mesh>
   );
 }

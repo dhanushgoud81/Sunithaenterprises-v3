@@ -65,8 +65,8 @@ export function Hero() {
         className="h-full w-full object-cover"
         fetchPriority="high"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-anthracite via-anthracite/80 to-anthracite/30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-transparent to-anthracite/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/50" />
     </div>
   );
 
@@ -74,7 +74,7 @@ export function Hero() {
     <section
       ref={section}
       id="upvc-hero"
-      className="relative flex flex-col overflow-hidden bg-anthracite text-white lg:block lg:h-[100svh] lg:min-h-[640px]"
+      className="relative flex flex-col overflow-hidden bg-navy text-white lg:block lg:h-[100svh] lg:min-h-[640px]"
       aria-labelledby="hero-title"
     >
       {/* Desktop: full-bleed stage behind the text. Phones: its own block between text and specs. */}
@@ -87,14 +87,14 @@ export function Hero() {
       </Stage3D>
 
       {/* legibility veil on the text side (desktop) */}
-      <div className="pointer-events-none absolute inset-0 hidden lg:block bg-gradient-to-r from-anthracite/85 via-anthracite/20 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 hidden lg:block bg-gradient-to-r from-navy/85 via-navy/20 to-transparent" />
 
       <div ref={content} className="contents lg:block lg:absolute lg:inset-0 lg:pointer-events-none">
         <div className="order-1 relative z-10 shell lg:pointer-events-auto pt-[112px] pb-4 lg:absolute lg:inset-x-0 lg:top-0 lg:bottom-[172px] lg:flex lg:flex-col lg:justify-center lg:pt-[72px] lg:pb-0">
           <div className="max-w-[44rem] flex flex-col gap-6">
-            <p data-hero-in className="eyebrow text-glass-bright">aluplast uPVC systems · Engineered for Indian weather</p>
+            <p data-hero-in className="eyebrow text-sky">aluplast uPVC systems · Engineered for Indian weather</p>
             <h1 id="hero-title" data-hero-in className="display-xl text-white">
-              Premium uPVC windows <span className="text-glass-bright">&amp;&nbsp;doors</span>
+              Premium uPVC windows <span className="text-sky">&amp;&nbsp;doors</span>
             </h1>
             <p data-hero-in className="text-white/70 text-[1.0625rem] lg:text-lg measure max-w-[34rem]">
               Sunitha Enterprises designs, fabricates and installs high-performance uPVC windows and doors, made for the Indian climate with lasting durability, energy efficiency and quiet elegance.

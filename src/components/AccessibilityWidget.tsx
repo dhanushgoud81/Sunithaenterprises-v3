@@ -36,7 +36,7 @@ export const AccessibilityWidget = () => {
   return (
     <div className="fixed left-5 z-40" style={{ bottom: 'max(20px, calc(env(safe-area-inset-bottom, 0px) + 12px))' }}>
       {open && (
-        <div ref={panel} role="dialog" aria-label="Accessibility options" className="absolute bottom-14 left-0 w-60 rounded-[4px] border border-white/10 bg-anthracite p-4 text-white shadow-2xl animate-[fadeIn_.2s_ease]">
+        <div ref={panel} role="dialog" aria-label="Accessibility options" className="absolute bottom-14 left-0 w-60 rounded-[4px] border border-white/10 bg-navy p-4 text-white shadow-2xl animate-[fadeIn_.2s_ease]">
           <div className="mb-3 flex items-center justify-between">
             <p className="eyebrow text-white/50">Accessibility</p>
             <button onClick={() => setOpen(false)} aria-label="Close accessibility options" className="text-white/50 hover:text-white"><X className="h-4 w-4" /></button>
@@ -50,9 +50,9 @@ export const AccessibilityWidget = () => {
                   onClick={o.toggle}
                   className="flex w-full items-center gap-3 rounded-[2px] px-2 py-2.5 text-left text-sm hover:bg-white/5"
                 >
-                  <o.icon className="h-4 w-4 text-glass-bright" aria-hidden="true" />
+                  <o.icon className="h-4 w-4 text-sky" aria-hidden="true" />
                   <span className="flex-1">{o.label}</span>
-                  <span className={cn('relative h-5 w-9 rounded-full transition-colors', o.on ? 'bg-glass-bright' : 'bg-white/15')}>
+                  <span className={cn('relative h-5 w-9 rounded-full transition-colors', o.on ? 'bg-sky' : 'bg-white/15')}>
                     <span className={cn('absolute top-0.5 h-4 w-4 rounded-full bg-white transition-transform', o.on ? 'translate-x-[18px]' : 'translate-x-0.5')} />
                   </span>
                 </button>
@@ -65,7 +65,7 @@ export const AccessibilityWidget = () => {
         ref={btn}
         onClick={() => setOpen(v => !v)}
         aria-expanded={open}
-        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-anthracite/90 text-white backdrop-blur hover:bg-basalt"
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-navy/90 text-white backdrop-blur hover:bg-basalt"
         aria-label="Accessibility options"
       >
         <Accessibility className="h-5 w-5" aria-hidden="true" />

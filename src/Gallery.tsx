@@ -97,7 +97,7 @@ export default function GalleryPage() {
       {/* ── Page intro ─────────────────────────────────────────────────────── */}
       <header className="bg-paper">
         <div className="shell pt-16 pb-10 lg:pt-24 lg:pb-14">
-          <p className="eyebrow text-glass mb-5">Gallery</p>
+          <p className="eyebrow text-brand mb-5">Gallery</p>
           <h1 className="display-xl max-w-[16ch]">uPVC windows in finished homes.</h1>
           <p className="mt-6 text-muted text-lg measure">Sliding doors, arched elevations and tilt-and-turn windows, photographed in place.</p>
         </div>
@@ -165,7 +165,7 @@ export default function GalleryPage() {
             <div className="mb-16">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <span className="eyebrow text-glass">
+                  <span className="eyebrow text-brand">
                     Curated Collections
                   </span>
                   <h3 className="text-2xl font-semibold font-display font-semiwide">
@@ -201,7 +201,7 @@ export default function GalleryPage() {
 
                     <div className="p-5">
                       <div className="flex items-center justify-between gap-2 mb-1">
-                        <h4 className="text-lg font-bold font-display text-white uppercase tracking-tight group-hover:text-glass-bright transition-colors">
+                        <h4 className="text-lg font-bold font-display text-white uppercase tracking-tight group-hover:text-sky transition-colors">
                           {gallery.title}
                         </h4>
                         <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-electric-blue group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -209,7 +209,7 @@ export default function GalleryPage() {
                       <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">
                         {gallery.description}
                       </p>
-                      <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-glass-bright font-bold font-display uppercase tracking-wider">
+                      <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-sky font-bold font-display uppercase tracking-wider">
                         <span>View Full Gallery</span>
                         <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </div>
@@ -223,7 +223,7 @@ export default function GalleryPage() {
           {/* Section Subhead for Photos */}
           <div className="flex items-center justify-between mb-6">
             <div>
-              <span className="eyebrow text-glass">
+              <span className="eyebrow text-brand">
                 {activeTab === 'all' ? 'Entire Collection' : galleries.find(g => g.id === activeTab)?.title}
               </span>
               <h3 className="text-2xl sm:text-3xl font-semibold font-display font-semiwide">
@@ -292,7 +292,7 @@ export default function GalleryPage() {
                     {/* Hover Info & View Action */}
                     <div className="absolute inset-0 p-4 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="flex justify-between items-start">
-                        <span className="bg-slate-950/80 backdrop-blur-md text-glass-bright text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 border border-glass-bright/30">
+                        <span className="bg-slate-950/80 backdrop-blur-md text-sky text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 border border-sky/30">
                           {item.galleryTitle}
                         </span>
                         <div className="p-1.5 bg-electric-blue text-white rounded-none shadow-md">

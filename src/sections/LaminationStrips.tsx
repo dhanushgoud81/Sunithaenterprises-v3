@@ -36,7 +36,7 @@ function Strip({ family, items, tag }: { family: string; items: readonly Lam[]; 
             </span>
             {/* detail card while open */}
             <span className={cn('absolute inset-x-3 bottom-3 flex flex-col gap-1 rounded-[2px] bg-white/90 p-3 md:p-4 backdrop-blur transition-[opacity,transform] duration-500', on ? 'translate-y-0 opacity-100 delay-150' : 'translate-y-3 opacity-0')}>
-              <span className="eyebrow text-glass">{tag}</span>
+              <span className="eyebrow text-brand">{tag}</span>
               <span className="font-display text-lg font-semibold capitalize leading-tight text-ink">{shortName(l.name)}</span>
               <span className="text-sm text-muted">{l.desc}</span>
               <span className="font-mono text-xs text-muted">{l.bg.toUpperCase()}</span>

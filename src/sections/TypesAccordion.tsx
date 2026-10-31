@@ -25,7 +25,7 @@ export function TypesAccordion() {
           intro="From casement to sliding, fixed to tilt-and-turn: each type is designed with unique features combining durability, energy efficiency and modern design."
         />
 
-        <div data-reveal className="flex h-[min(720px,calc(100svh-120px))] min-h-[560px] flex-col gap-1.5 overflow-hidden rounded-[4px] bg-anthracite p-1.5 lg:h-[600px] lg:min-h-0 lg:flex-row">
+        <div data-reveal className="flex h-[min(720px,calc(100svh-120px))] min-h-[560px] flex-col gap-1.5 overflow-hidden rounded-[4px] bg-navy p-1.5 lg:h-[600px] lg:min-h-0 lg:flex-row">
           {WINDOW_TYPES.map((w, i) => {
             const on = i === active;
             return (
@@ -44,7 +44,7 @@ export function TypesAccordion() {
                   className={cn('absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-[var(--ease-frame)]', on ? 'scale-100' : 'scale-110')}
                   loading="lazy"
                 />
-                <div className={cn('absolute inset-0 transition-colors duration-700', on ? 'bg-gradient-to-t from-anthracite/95 via-anthracite/55 to-anthracite/5 lg:via-anthracite/35' : 'bg-anthracite/55 group-hover:bg-anthracite/40')} />
+                <div className={cn('absolute inset-0 transition-colors duration-700', on ? 'bg-gradient-to-t from-navy/95 via-navy/55 to-navy/5 lg:via-navy/35' : 'bg-navy/55 group-hover:bg-navy/40')} />
 
                 {/* Collapsed label: vertical on desktop, horizontal on phones */}
                 <button
@@ -55,7 +55,7 @@ export function TypesAccordion() {
                   className={cn('absolute inset-0 flex items-center justify-center transition-opacity duration-500', on ? 'pointer-events-none opacity-0' : 'opacity-100')}
                 >
                   <span className="flex items-center gap-3 text-white lg:flex-col lg:gap-4">
-                    <span className="font-mono text-xs text-glass-bright tabular">{w.num}</span>
+                    <span className="font-mono text-xs text-sky tabular">{w.num}</span>
                     <span className="font-display text-base font-semibold font-semiwide whitespace-nowrap lg:text-lg lg:[writing-mode:vertical-rl] lg:rotate-180">
                       {w.title}
                     </span>
@@ -71,7 +71,7 @@ export function TypesAccordion() {
                   )}
                   aria-hidden={!on}
                 >
-                  <p className="eyebrow text-glass-bright">Window type {w.num}</p>
+                  <p className="eyebrow text-sky">Window type {w.num}</p>
                   <h3 className="font-display text-[clamp(1.6rem,3vw,2.5rem)] font-semibold font-semiwide leading-tight text-white">{w.title}</h3>
                   <p className="measure max-w-[34rem] text-[0.9375rem] text-white/75 sm:text-base">{w.desc}</p>
                   <div className="flex flex-wrap gap-3 pt-2">

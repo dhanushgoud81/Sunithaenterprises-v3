@@ -21,8 +21,8 @@ const PRODUCTS = [
   'Not sure yet',
 ];
 
-const field = 'peer w-full rounded-[2px] border border-rule bg-white px-4 pt-6 pb-2.5 text-[1rem] text-ink outline-none transition-colors focus:border-glass placeholder-transparent';
-const label = 'pointer-events-none absolute left-4 top-2 text-xs text-muted transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-[0.9375rem] peer-focus:top-2 peer-focus:text-xs peer-focus:text-glass';
+const field = 'peer w-full rounded-[2px] border border-rule bg-white px-4 pt-6 pb-2.5 text-[1rem] text-ink outline-none transition-colors focus:border-brand placeholder-transparent';
+const label = 'pointer-events-none absolute left-4 top-2 text-xs text-muted transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-[0.9375rem] peer-focus:top-2 peer-focus:text-xs peer-focus:text-brand';
 
 function Field({ id, name, text, type = 'text', required, autoComplete, inputMode }: {
   id: string; name: string; text: string; type?: string; required?: boolean; autoComplete?: string; inputMode?: React.HTMLAttributes<HTMLInputElement>['inputMode'];
@@ -30,7 +30,7 @@ function Field({ id, name, text, type = 'text', required, autoComplete, inputMod
   return (
     <div className="relative">
       <input id={id} name={name} type={type} required={required} placeholder=" " autoComplete={autoComplete} inputMode={inputMode} className={field} />
-      <label htmlFor={id} className={label}>{text}{required && <span className="text-glass"> *</span>}</label>
+      <label htmlFor={id} className={label}>{text}{required && <span className="text-brand"> *</span>}</label>
     </div>
   );
 }
@@ -69,7 +69,7 @@ export default function Contact() {
     <PageWrapper>
       <section ref={ref} className="bg-paper" id="contact-hero" aria-labelledby="contact-title">
         <div className="shell pt-16 pb-12 lg:pt-24 lg:pb-16">
-          <p data-reveal className="eyebrow text-glass mb-5">Contact</p>
+          <p data-reveal className="eyebrow text-brand mb-5">Contact</p>
           <h1 id="contact-title" data-reveal className="display-xl max-w-[16ch]">Get a quote for your windows.</h1>
           <p data-reveal className="mt-6 text-muted text-lg measure">
             Tell us about your openings. We'll review the details and get back to you with a recommendation and a preliminary quote.
@@ -83,7 +83,7 @@ export default function Contact() {
               {channels.map(c => {
                 const inner = (
                   <>
-                    <c.icon className="mt-0.5 h-5 w-5 shrink-0 text-glass" aria-hidden="true" />
+                    <c.icon className="mt-0.5 h-5 w-5 shrink-0 text-brand" aria-hidden="true" />
                     <span className="flex flex-col gap-1">
                       <span className="eyebrow text-muted">{c.label}</span>
                       <span className={cn('text-[1.0625rem] text-ink break-words', c.mono && 'font-mono tabular')}>{c.value}</span>
@@ -93,9 +93,9 @@ export default function Contact() {
                 return (
                   <li key={c.label} data-reveal className="border-b border-rule">
                     {c.href ? (
-                      <a href={c.href} target={c.external ? '_blank' : undefined} rel={c.external ? 'noopener noreferrer' : undefined} className="group flex gap-4 py-5 hover:text-glass">
+                      <a href={c.href} target={c.external ? '_blank' : undefined} rel={c.external ? 'noopener noreferrer' : undefined} className="group flex gap-4 py-5 hover:text-brand">
                         {inner}
-                        <ArrowRight className="ml-auto mt-1 h-4 w-4 shrink-0 text-rule transition-all group-hover:translate-x-1 group-hover:text-glass" aria-hidden="true" />
+                        <ArrowRight className="ml-auto mt-1 h-4 w-4 shrink-0 text-rule transition-all group-hover:translate-x-1 group-hover:text-brand" aria-hidden="true" />
                       </a>
                     ) : <div className="flex gap-4 py-5">{inner}</div>}
                   </li>
@@ -105,8 +105,8 @@ export default function Contact() {
 
             <a data-reveal href={COMPANY.mapUrl} target="_blank" rel="noopener noreferrer" className="group relative block overflow-hidden rounded-[4px] bg-mist aspect-[4/3]">
               <img src="/images/location-map.jpg" alt="Map showing the Sunitha Enterprises workshop location" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
-              <span className="absolute inset-x-3 bottom-3 flex items-start gap-3 rounded-[2px] bg-anthracite/90 p-4 text-white backdrop-blur">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-glass-bright" aria-hidden="true" />
+              <span className="absolute inset-x-3 bottom-3 flex items-start gap-3 rounded-[2px] bg-navy/90 p-4 text-white backdrop-blur">
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-sky" aria-hidden="true" />
                 <span className="text-sm leading-relaxed">
                   <span className="block font-medium">Workshop & office</span>
                   <span className="text-white/65">{COMPANY.addressLines.join(' ')}</span>
@@ -119,7 +119,7 @@ export default function Contact() {
           <div data-reveal className="lg:col-span-8 rounded-[4px] border border-rule bg-white p-6 sm:p-10" id="contact-form">
             {formState === 'success' ? (
               <div className="flex flex-col items-start gap-5 py-10" role="status">
-                <CheckCircle2 className="h-12 w-12 text-glass" aria-hidden="true" />
+                <CheckCircle2 className="h-12 w-12 text-brand" aria-hidden="true" />
                 <h2 className="text-3xl font-semibold font-semiwide">Thanks, we've received your request.</h2>
                 <p className="text-muted measure">Our team will review your project and reply within 12 hours on working days.</p>
                 <button onClick={() => setFormState('idle')} className="btn btn-line mt-2">Send another request</button>
@@ -152,7 +152,7 @@ export default function Contact() {
 
                 <div className="relative sm:col-span-2">
                   <textarea id="cf-message" name="message" required rows={5} placeholder=" " className={cn(field, 'resize-none')} />
-                  <label htmlFor="cf-message" className={label}>Sizes, rooms and anything else we should know<span className="text-glass"> *</span></label>
+                  <label htmlFor="cf-message" className={label}>Sizes, rooms and anything else we should know<span className="text-brand"> *</span></label>
                 </div>
 
                 {formState === 'error' && (
